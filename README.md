@@ -108,7 +108,7 @@ This will create two files in your Meteor Up project directory:
   "setupNode": true,
 
   // WARNING: nodeVersion defaults to 0.10.36 if omitted. Do not use v, just the version number.
-  "nodeVersion": "0.10.36",
+  "nodeVersion": "0.10.41",
 
   // Install PhantomJS on the server
   "setupPhantom": true,
@@ -157,7 +157,7 @@ This will bundle the Meteor project and deploy it to the server.
 
 #### Deploy Wait Time
 
-Meteor Up checks if the deployment is successful or not just after the deployment. By default, it will wait 10 seconds before the check. You can configure the wait time with the `deployCheckWaitTime` option in the `mupc.json`
+Meteor Up Classic checks if the deployment is successful or not just after the deployment. By default, it will wait 10 seconds before the check. You can configure the wait time with the `deployCheckWaitTime` option in the `mupc.json`
 
 #### SSH keys with passphrase (or ssh-agent support)
 
@@ -203,7 +203,7 @@ When this process is not working you might encounter the following error:
 
 #### Server Setup Details
 
-This is how Meteor Up will configure the server for you based on the given `appName` or using "meteor" as default appName. This information will help you customize the server for your needs.
+This is how Meteor Up Classic will configure the server for you based on the given `appName` or using "meteor" as default appName. This information will help you customize the server for your needs.
 
 * your app lives at `/opt/<appName>/app`
 * mupc uses `upstart` with a config file at `/etc/init/<appName>.conf`
@@ -218,11 +218,11 @@ For more information see [`lib/taskLists.js`](https://github.com/arunoda/meteor-
 
 You can use an array to deploy to multiple servers at once.
 
-To deploy to *different* environments (e.g. staging, production, etc.), use separate Meteor Up configurations in separate directories, with each directory containing separate `mupc.json` and `settings.json` files, and the `mupc.json` files' `app` field pointing back to your app's local directory.
+To deploy to *different* environments (e.g. staging, production, etc.), use separate Meteor Up Classic configurations in separate directories, with each directory containing separate `mupc.json` and `settings.json` files, and the `mupc.json` files' `app` field pointing back to your app's local directory.
 
 #### Custom Meteor Binary
 
-Sometimes, you might be using `mrt`, or Meteor from a git checkout. By default, Meteor Up uses `meteor`. You can ask Meteor Up to use the correct binary with the `meteorBinary` option.
+Sometimes, you might be using `mrt`, or Meteor from a git checkout. By default, Meteor Up Classic uses `meteor`. You can ask Meteor Up Classic to use the correct binary with the `meteorBinary` option.
 
 ~~~js
 {
@@ -242,7 +242,7 @@ Mupc can tail logs from the server and supports all the options of `tail`.
 
 After you've edit environmental variables or `settings.json`, you can reconfigure the app without deploying again. Use the following command to do update the settings and restart the app.
 
-    mup reconfig
+    mupc reconfig
 
 If you want to stop, start or restart your app for any reason, you can use the following commands to manage it.
 
@@ -276,15 +276,15 @@ It is possible to provide server specific environment variables. Add the `env` o
 }
 ~~~
 
-By default, Meteor UP adds `CLUSTER_ENDPOINT_URL` to make [cluster](https://github.com/meteorhacks/cluster) deployment simple. But you can override it by defining it yourself.
+By default, Meteor Up Classic adds `CLUSTER_ENDPOINT_URL` to make [cluster](https://github.com/meteorhacks/cluster) deployment simple. But you can override it by defining it yourself.
 
 ### Multiple Deployments
 
-Meteor Up supports multiple deployments to a single server. Meteor Up only does the deployment; if you need to configure subdomains, you need to manually setup a reverse proxy yourself.
+Meteor Up Classic supports multiple deployments to a single server. Meteor Up Classic only does the deployment; if you need to configure subdomains, you need to manually setup a reverse proxy yourself.
 
 Let's assume, we need to deploy production and staging versions of the app to the same server. The production app runs on port 80 and the staging app runs on port 8000.
 
-We need to have two separate Meteor Up projects. For that, create two directories and initialize Meteor Up and add the necessary configurations.
+We need to have two separate Meteor Up Classic projects. For that, create two directories and initialize Meteor Up Classic and add the necessary configurations.
 
 In the staging `mupc.json`, add a field called `appName` with the value `staging`. You can add any name you prefer instead of `staging`. Since we are running our staging app on port 8000, add an environment variable called `PORT` with the value 8000.
 
@@ -292,7 +292,7 @@ Now setup both projects and deploy as you need.
 
 ### SSL Support
 
-Meteor Up has the built in SSL support. It uses [stud](https://github.com/bumptech/stud) SSL terminator for that. First you need to get a SSL certificate from some provider. This is how to do that:
+Meteor Up Classic has the built in SSL support. It uses [stud](https://github.com/bumptech/stud) SSL terminator for that. First you need to get a SSL certificate from some provider. This is how to do that:
 
 * [First you need to generate a CSR file and the private key](http://www.rackspace.com/knowledge_center/article/generate-a-csr-with-openssl)
 * Then purchase a SSL certificate.
@@ -337,7 +337,7 @@ You should try and keep `mupc` up to date in order to keep up with the latest Me
 
 #### Check Access
 
-Your issue might not always be related to Meteor Up. So make sure you can connect to your instance first, and that your credentials are working properly.
+Your issue might not always be related to Meteor Up Classic. So make sure you can connect to your instance first, and that your credentials are working properly.
 
 #### Check Logs
 If you suddenly can't deploy your app anymore, first use the `mupc logs -f` command to check the logs for error messages.
@@ -355,9 +355,9 @@ where `<command>` is one of the `mupc` commands such as `setup`, `deploy`, etc.
 
 Some of the Meteor core packages as well some of the community packages comes with npm modules which has been written in `C` or `C++`. These modules are platform dependent.
 So, we need to do special handling, before running the bundle generated from `meteor bundle`.
-(meteor up uses the meteor bundle)
+(meteor up classic uses the meteor bundle)
 
-Fortunately, Meteor Up **will take care** of that job for you and it will detect binary npm modules and re-build them before running your app on the given server.
+Fortunately, Meteor Up Classic **will take care** of that job for you and it will detect binary npm modules and re-build them before running your app on the given server.
 
 > * Meteor 0.9 adds a similar feature where it allows package developers to publish their packages for different architecures, if their packages has binary npm modules.
 > * As a side effect of that, if you are using a binary npm module inside your app via `meteorhacks:npm` package, you won't be able to deploy into `*.meteor.com`.
@@ -365,6 +365,6 @@ Fortunately, Meteor Up **will take care** of that job for you and it will detect
 
 ### Additional Resources
 
-* [Using Meteor Up with Nitrous.io](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-Nitrous.io)
+* [Using Meteor Up Classic with Nitrous.io](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-Nitrous.io)
 * [Change Ownership of Additional Directories](https://github.com/arunoda/meteor-up/wiki/Change-Ownership-of-Additional-Directories)
-* [Using Meteor Up with NginX vhosts](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-NginX-vhosts)
+* [Using Meteor Up Classic with NginX vhosts](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-NginX-vhosts)
