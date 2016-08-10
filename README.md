@@ -9,7 +9,7 @@ You can use install and use Meteor Up from Linux, Mac.
 
 Meteor Up Classic does not user docker containers. Docker-enabled version is developed by KadiraHQ here: https://github.com/kadirahq/meteor-up.
 
-**Note:** Meteor Up Classic is Meteor 1.4-ready. It uses Node 4.4.7 and MongoDB 3.2 by default.
+**Note:** This branch of Meteor Up Classic is Meteor 1.4-ready. It uses Node 4.4.7 and MongoDB 3.2 by default.
 
 > Screencast: [How to deploy a Meteor app with Meteor Up (by Sacha Greif)](https://www.youtube.com/watch?v=WLGdXtZMmiI)
 
