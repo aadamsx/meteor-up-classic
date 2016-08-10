@@ -7,7 +7,9 @@ Meteor Up Classic (mupc for short) is a command line tool that allows you to dep
 
 You can use install and use Meteor Up from Linux, Mac.
 
-**Note:** This fork is Meteor 1.3-ready. It uses Node 0.10.43 by default.  The branched named 1.4 will be 1.4-ready soon (I'll reflect this much here when it's ready).
+Meteor Up Classic does not user docker containers. Docker-enabled version is developed by KadiraHQ here: https://github.com/kadirahq/meteor-up.
+
+**Note:** Meteor Up Classic is Meteor 1.4-ready. It uses Node 4.4.7 and MongoDB 3.2 by default.
 
 > Screencast: [How to deploy a Meteor app with Meteor Up (by Sacha Greif)](https://www.youtube.com/watch?v=WLGdXtZMmiI)
 
@@ -107,8 +109,8 @@ This will create two files in your Meteor Up project directory:
   // WARNING: Node.js is required! Only skip if you already have Node.js installed on server.
   "setupNode": true,
 
-  // WARNING: nodeVersion defaults to 0.10.36 if omitted. Do not use v, just the version number.
-  "nodeVersion": "0.10.41",
+  // WARNING: nodeVersion defaults to 4.4.7 if omitted. Do not use v, just the version number.
+  "nodeVersion": "4.4.7",
 
   // Install PhantomJS on the server
   "setupPhantom": true,

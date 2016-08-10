@@ -14,7 +14,7 @@ sudo apt-get update
 <% if (nodeVersion) { %>
   NODE_VERSION=<%= nodeVersion %>
 <% } else {%>
-  NODE_VERSION=0.10.43
+  NODE_VERSION=4.4.7
 <% } %>
 
 ARCH=$(python -c 'import platform; print platform.architecture()[0]')
@@ -36,3 +36,7 @@ sudo mv ${NODE_DIST} /opt/nodejs
 
 sudo ln -sf /opt/nodejs/bin/node /usr/bin/node
 sudo ln -sf /opt/nodejs/bin/npm /usr/bin/npm
+
+# Install node-gyp and remove old files if necessary
+sudo npm install -g node-gyp
+sudo rm -rf ~/.node-gyp*
