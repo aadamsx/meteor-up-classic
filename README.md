@@ -60,12 +60,6 @@ Meteor Up Classic does not user docker containers. Docker-enabled version is dev
 
 ### Installation
 
-**Note:** These instructions are for installing the main branch (which is 1.3 compatible) of meteor-up-classic.
-
-    npm install -g mupc
-
-**Note:** Or alternatively
-
     npm remove -g mupc # Only if you already installed mupc before
     git clone https://github.com/aadamsx/meteor-up-classic.git
     cd meteor-up-classic
