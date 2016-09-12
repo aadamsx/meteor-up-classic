@@ -3,7 +3,7 @@
 
 #### Production Quality Meteor Deployments
 
-Meteor Up Classic (mupc for short) is a command line tool that allows you to deploy any [Meteor](http://meteor.com) app to your own server. It supports only Debian/Ubuntu flavours. (PRs are welcome)
+Meteor Up Classic (mupc for short) is a command line tool that allows you to deploy any [Meteor](http://meteor.com) app to your own server. It supports only Debian/Ubuntu 14.04.X flavours. (PRs are welcome)
 
 You can use install and use Meteor Up from Linux, Mac.
 
