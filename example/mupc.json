@@ -44,7 +44,7 @@
   // your NGINX proxy or Cloudflare. When using just Meteor on SSL without spiderable this is not necessary
   "env": {
     "PORT": 8282,
-    "ROOT_URL": "http://localhost",
+    "ROOT_URL": "http://localhost"
     //"MONGO_URL": "mongodb://arunoda:fd8dsjsfh7@hanso.mongohq.com:10023/MyApp",
     //"MAIL_URL": "smtp://postmaster%40myapp.mailgun.org:adj87sjhd7s@smtp.mailgun.org:587/"
   },
