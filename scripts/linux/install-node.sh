@@ -37,6 +37,10 @@ sudo mv ${NODE_DIST} /opt/nodejs
 sudo ln -sf /opt/nodejs/bin/node /usr/bin/node
 sudo ln -sf /opt/nodejs/bin/npm /usr/bin/npm
 
+sudo ln -s /opt/nodejs/bin/wait-for-mongo /usr/sbin/wait-for-mongo
+sudo ln -s /opt/nodejs/bin/forever /usr/sbin/forever
+sudo ln -s /opt/nodejs/bin/userdown /usr/sbin/userdown
+
 # Install node-gyp and remove old files if necessary
 sudo npm install -g node-gyp
 sudo rm -rf ~/.node-gyp*
