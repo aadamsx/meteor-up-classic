@@ -20,8 +20,8 @@
   // WARNING: Node.js is required! Only skip if you already have Node.js installed on server.
   "setupNode": true,
 
-  // WARNING: nodeVersion defaults to 4.4.7 if omitted. Do not use v, just the version number.
-  "nodeVersion": "4.6.1",
+  // WARNING: nodeVersion defaults to 4.8.3 if omitted. Do not use v, just the version number.
+  "nodeVersion": "4.8.3",
 
   // Install PhantomJS on the server
   "setupPhantom": true,
