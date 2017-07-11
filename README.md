@@ -7,7 +7,8 @@ Meteor Up Classic (mupc for short) is a command line tool that allows you to dep
 
 You can use install and use Meteor Up from Linux, Mac.
 
-**Note:** Meteor Up Classic is Meteor 1.3-ready. It uses Node 0.10.43 by default.  The branched named mupc-1.4 is 1.4-ready right now.
+**Note:** Meteor Up Classic is Meteor 1.3-ready. It uses Node 0.10.43 by default.  The branched named mupc-1.4 is 1.4-ready right now.  
+**Note:** A new mupc-1.5 branch as been added.
 
 Meteor Up Classic does not user docker containers. Docker-enabled version is developed by KadiraHQ here: https://github.com/kadirahq/meteor-up.
 
