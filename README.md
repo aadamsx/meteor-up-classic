@@ -61,7 +61,7 @@ Meteor Up Classic does not user docker containers. Docker-enabled version is dev
 ### Installation
 
     npm remove -g mupc # Only if you already installed mupc before
-    git clone -b mupc-1.4 --single-branch https://github.com/aadamsx/meteor-up-classic.git
+    git clone -b mupc-1.5 --single-branch https://github.com/aadamsx/meteor-up-classic.git
     cd meteor-up-classic
     npm install -g
 
@@ -104,7 +104,7 @@ This will create two files in your Meteor Up project directory:
   "setupNode": true,
 
   // WARNING: nodeVersion defaults to 4.4.7 if omitted. Do not use v, just the version number.
-  "nodeVersion": "4.4.7",
+  "nodeVersion": "4.8.3",
 
   // Install PhantomJS on the server
   "setupPhantom": true,
