@@ -11,7 +11,7 @@ Meteor Up Classic (MUPC) does not user docker containers like all the rest MUP f
 
 **Note:** This branch of Meteor Up Classic is Meteor 1.5-ready. It uses Node 4.8.3 and MongoDB 3.2 by default.
 **Note:** I Can confirm this branch works with Meteor 1.5 Node 4.8.3 and MongoDB 3.2 and an Ubuntu 14 EC2 instance.
-**Note:** This is an experimental branch, trying to add Letsencrypt support.
+**NOTE, IMPORTANT:** This is an experimental branch, in development, trying to add Letsencrypt support.
 
 > Screencast: [How to deploy a Meteor app with Meteor Up (by Sacha Greif)](https://www.youtube.com/watch?v=WLGdXtZMmiI)
 
