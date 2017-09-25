@@ -16,9 +16,13 @@ gyp_rebuild_inside_node_modules () {
         if [ -d ./node_modules ]; then
           cd ./node_modules
           for module in ./*; do
-            cd $module
-            check_for_binary_modules
-            cd ..
+            if [ "$(ls -A $module)" ]; then
+              if [ -d $module ]; then
+                cd $module
+                check_for_binary_modules
+                cd ..
+              fi
+            fi
           done
           cd ../
         fi
